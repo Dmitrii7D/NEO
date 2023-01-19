@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700);
+
+@font-face {
+    font-family: 'Tiempos Headline';
+    src: url('../TiemposHeadline-Medium.eot');
+    src: local('../Tiempos Headline Medium'), local('TiemposHeadline-Medium'),
+        url('../TiemposHeadline-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../TiemposHeadline-Medium.woff') format('woff'),
+        url('../TiemposHeadline-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('../TiemposText-Bold.eot');
+    src: local('../Tiempos Text Bold'), local('TiemposText-Bold'),
+        url('../TiemposText-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../TiemposText-Bold.woff') format('woff'),
+        url('../TiemposText-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+.text-Montserrat {font-family: Montserrat;
+
+}
+.text-tiempos {font-family: Tiempos Text
+
+}
