@@ -1,28 +1,244 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700);
 
 @font-face {
-    font-family: 'Tiempos Headline';
-    src: url('../TiemposHeadline-Medium.eot');
-    src: local('../Tiempos Headline Medium'), local('TiemposHeadline-Medium'),
-        url('../TiemposHeadline-Medium.eot?#iefix') format('embedded-opentype'),
-        url('../TiemposHeadline-Medium.woff') format('woff'),
-        url('../TiemposHeadline-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
+	font-family: 'Tiempos Headline';
+	src: url('../TiemposHeadline-Medium.eot');
+	src: local('../Tiempos Headline Medium'), local('TiemposHeadline-Medium'),
+		url('../TiemposHeadline-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../TiemposHeadline-Medium.woff') format('woff'),
+		url('../TiemposHeadline-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
 }
+
 @font-face {
-    font-family: 'Tiempos Text';
-    src: url('../TiemposText-Bold.eot');
-    src: local('../Tiempos Text Bold'), local('TiemposText-Bold'),
-        url('../TiemposText-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../TiemposText-Bold.woff') format('woff'),
-        url('../TiemposText-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+	font-family: 'Tiempos Text';
+	src: url('../TiemposText-Bold.eot');
+	src: local('../Tiempos Text Bold'), local('TiemposText-Bold'),
+		url('../TiemposText-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../TiemposText-Bold.woff') format('woff'),
+		url('../TiemposText-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
 }
-.text-Montserrat {font-family: Montserrat;
+
+body {
+	width: 100%;
+	height: 100%;
+	background: #dbd0d0;
+}
+
+.header {
+	display: flex;
+	background: #100FA8;
+	padding: 32px 87px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+.header__menu {
+	border: 1px solid #000033;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 40px;
+	width: 705px;
+	height: 24px;
+}
+
+.header__logo {
+	max-height: 40px;
+	max-width: 124px;
+}
+
+.menu {
+	display: flex;
+	column-gap: 40px;
+}
+
+.menu__link {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1.33;
+	color: #F4F2FA;
+	text-decoration: none;
+	cursor: pointer;
+	position: relative;
+}
+
+.menu__link:hover {
+	color: #f4f2fab3;
+	transition: color 0.3s;
+}
+
+.menu__sub-menu {
+	padding: 24px;
+	background: #FFFFFF;
+	border: 1px solid #CCCCD6;
+	box-shadow: 0px 36px 64px rgba(0, 0, 51, 0.2);
+	border-radius: 16px;
+	display: none;
+	position: absolute;
+	row-gap: 24px;
+}
+
+.menu__link:hover .menu__sub-menu {
+	display: grid;
+}
+
+.menu__sub-link {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.2;
+	color: #000033;
+	width: max-content;
+}
+
+/*
+.polugon {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+
+	position: relative;
+	width: 524px;
+	height: 614px;
+	border: 1px solid black;
+	
+}
+
+
+	
+
+/*
+.nav a {
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	color: #F4F2FA;}
+
+.menu {
+	display: fldex;
+	
+	height: 24px;
+	justify-content: space-between;
+	list-style: none;
+	padding: 0px;
+	gap: 40px;
 
 }
-.text-tiempos {font-family: Tiempos Text
+
+.menu li{
+position: absolute;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+gap: 24px;
+width: 524px;
+height: 600px;
+background: #FFFFFF;
+border: 1px solid #CCCCD6;
+box-shadow: 0px 36px 64px rgba(0, 0, 51, 0.2);
+border-radius: 16px;
+}
+.sub-menu_link{
+color: #000033;
+}
+
+
+
+
+ul li img {
+	margin-left: 10px;
+}
+
+*/
+.textbutton {
+	width: 182px;
+	border: 1px solid #F4F2FA;
+	border-radius: 4px;
+	font-size: 18px;
+	font-weight: 700;
+	color: #F4F2FA;
+	background: #100FA8;
+}
+
+/*все что ниже header*/
+.main {
+	display: flex;
+	width: 1538px;
+	margin-top: -1px;
+
+}
+
+/*синий фон*/
+.contact {
+	background: #100FA8;
+	width: 1538px;
+	height: 840px;
+	border: 2px solid rgb(220, 220, 37);
+}
+
+/*синий флекс контейнер*/
+.contflex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 2px solid rgb(107, 198, 210);
+	position: absolute;
+	width: 1394px;
+	height: 840px;
+	left: 144px;
+
+}
+
+
+/*контактная информация синий фон*/
+.continfo {
+	display: flex;
+	flex-wrap: wrap;
+	width: 610px;
+	height: 545px;
+	border: 2px solid beige;
+}
+
+p {
+	margin-top: 0px;
+	width: 607px;
+	height: 252px;
+	font-family: 'Montserrat';
+	font-weight: 600;
+	font-size: 52px;
+	line-height: 63px;
+	color: #FFFFFF;
+	border: 2px solid rgb(234, 14, 14);
+
+
+}
+
+.contbutton {
+	margin-top: 72px;
+	padding: 16px;
+	gap: 4px;
+	width: 188px;
+	height: 56px;
+	background: #FFFFFF;
+	border-radius: 4px;
+	font-family: 'Montserrat';
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000033;
+
 
 }
