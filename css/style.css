@@ -36,23 +36,12 @@ body {
 	justify-content: space-between;
 }
 
-
-.header__menu {
-	border: 1px solid #000033;
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	padding: 0px;
-	gap: 40px;
-	width: 705px;
-	height: 24px;
-}
-
 .header__logo {
 	max-height: 40px;
 	max-width: 124px;
 }
 
+/* ********* Меню ********* */
 .menu {
 	display: flex;
 	column-gap: 40px;
@@ -75,30 +64,77 @@ body {
 	transition: color 0.3s;
 }
 
+.menu__link_arrow::after {
+	content: url(../img/Icon.png);
+	display: inline-block;
+	transition: all 0.3s;
+}
+
+.menu__link_arrow:hover::after {
+	transform: rotate(180deg);
+}
+
+/* ********* Пподменю ********* */
 .menu__sub-menu {
-	padding: 24px;
-	background: #FFFFFF;
-	border: 1px solid #CCCCD6;
-	box-shadow: 0px 36px 64px rgba(0, 0, 51, 0.2);
-	border-radius: 16px;
-	display: none;
 	position: absolute;
+	overflow: hidden;
+	max-height: 0;
+	z-index: 0;
+}
+
+.menu__sub-menu::before {
+	content: url(../img/triangle.png);
+	position: absolute;
+	top: -15px;
+	left: 10px;
+	z-index: -1;
+}
+
+.menu__sub-link-wrapp {
 	row-gap: 24px;
+	display: grid;
+	padding: 24px;
+	width: max-content;
+	background: #FFFFFF;
+	z-index: 1;
+	border-radius: 16px;
+	box-shadow: 0px 36px 64px rgba(0, 0, 51, 0.2);
+	border: 1px solid #CCCCD6;
 }
 
 .menu__link:hover .menu__sub-menu {
-	display: grid;
+	/*костыль*/
+	max-height: 1200px;
+	transition: all 0.6s;
+	overflow: inherit;
 }
 
 .menu__sub-link {
+	text-decoration: none;
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 1.2;
 	color: #000033;
-	width: max-content;
+	display: flex;
+	align-items: center;
+	padding: 12px 8px;
 }
+
+.menu__sub-link:hover {
+	background: #F4F2FA;
+	border-radius: 8px;
+}
+
+.menu__img-link {
+	height: 32px;
+	width: 32px;
+	margin-right: 16px;
+
+}
+
+
 
 /*
 .polugon {
@@ -165,13 +201,16 @@ ul li img {
 */
 .textbutton {
 	width: 182px;
+	height: 56px;
 	border: 1px solid #F4F2FA;
 	border-radius: 4px;
 	font-size: 18px;
 	font-weight: 700;
 	color: #F4F2FA;
 	background: #100FA8;
+	cursor: pointer;
 }
+
 
 /*все что ниже header*/
 .main {
